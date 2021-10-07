@@ -24,10 +24,11 @@ def main():
 
     gmaps = googlemaps.Client(key=google_api_key)
     house_location_list = [
-        "22928 NE 15th Pl Sammamish, WA 98074",
-        "4932 125th Ave SE Bellevue, WA 98006",
-        "6009 147th Ave SE Bellevue, WA 98006",
-        "4429 233rd Pl SE Bothell, WA 98021"
+        # "22928 NE 15th Pl Sammamish, WA 98074",
+        # "4932 125th Ave SE Bellevue, WA 98006",
+        # "6009 147th Ave SE Bellevue, WA 98006",
+        # "4429 233rd Pl SE Bothell, WA 98021",
+        "6719 SE 5th St SE Renton, WA 98059"
     ]
     now = datetime.now()
     morning = datetime(now.year, now.month, now.day + 1, 8, 0, 0, tzinfo=timezone(timedelta(hours=-8)))
@@ -37,7 +38,13 @@ def main():
     all_day = [morning, afternoon, night]
     frequent_places_departure_time = {
         "Jing Mei": ("HR2H+WJ Bellevue, Washington", [morning, afternoon]),
-        "Asian Family Market Bellevue": ("JVG3+P9 Bellevue, Washington", all_day),
+        "Nearest Chinese Food Market": (
+            [
+                "JVG3+P9 Bellevue, Washington",
+                "QMV8+VH Edmonds, Washington",
+                "CQQH+GJ Kent, Washington",
+            ],
+            all_day),
         "Bellevue Square": ("JQ8W+79 Bellevue, Washington", [night]),
         "Nearest Costco": (["MRJ9+78 Kirkland, Washington",
                             "MWF5+9H Redmond, Washington",

@@ -1,3 +1,8 @@
 google_api.secret
 venv/
 .idea/
+bin
+lib64
+pyvenv.cfg
+
+
